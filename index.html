@@ -22,6 +22,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap&subset=hebrew" rel="stylesheet">
 
+<!-- מדידה: GoatCounter. בלי עוגיות ובלי זיהוי אישי. -->
+<script data-goatcounter="https://zulat.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 <style>
   :root{
     --navy:#07255A;        /* נדגם מקובץ הלוגו הרשמי של זולת */
@@ -344,6 +348,16 @@ function goToStep2(name){
     g.parentNode.insertBefore(m, g);
     g.style.display = "none";
   }
+
+  // מדידה. goToStep2 רץ רק אחרי חתימה תקינה, ולכן זו נקודת הספירה הנכונה.
+  // עטוף ב-try כי הסקריפט נטען async ועלול לא להיות מוכן, וזה לא אמור לשבור כלום.
+  function track(n){
+    try { if(window.goatcounter && window.goatcounter.count){ window.goatcounter.count({path:n, event:true}); } } catch(e){}
+  }
+  track("sign-petition");
+  $("mailto").addEventListener("click", function(){ track("open-mail-app"); });
+  $("gmail").addEventListener("click",  function(){ track("open-gmail"); });
+  $("copy").addEventListener("click",   function(){ track("copy-text"); });
 
   var pageUrl = location.href.split("#")[0];
   var shareTxt = "אין נתונים? אין הטבות! ערוץ 14 לא מוסר על פי חוק את נתוני ההכנסות שלו וממשיך לקבל הטבות. חתמתי, הצטרפו: ";
