@@ -325,6 +325,18 @@ function goToStep2(name){
   $("v-su").textContent   = SUBJECT;
   $("v-body").textContent = BODY;
 
+    // בנייד, קישור חיבור ההודעה של Gmail נשבר: גוגל מתעלמת מהנמען ומהטקסט
+  // ופותחת תיבת דואר ריקה. לעומת זאת mailto פותח את אפליקציית המייל עם הכל מוכן.
+  // לכן בטלפון הופכים את הסדר ואת ההדגשה.
+  if(/Android|iPhone|iPad|iPod|Mobile|Silk/i.test(navigator.userAgent)){
+    var g = $("gmail"), m = $("mailto");
+    m.className = "btn btn-main";
+    g.className = "btn btn-alt";
+    m.textContent = "פתיחת המייל המוכן";
+    g.textContent = "פתיחה ב־Gmail בדפדפן";
+    g.parentNode.insertBefore(m, g);
+  }
+
   var pageUrl = location.href.split("#")[0];
   var shareTxt = "ערוץ 14 לא מסר את נתוני ההכנסות שלו. חתמתי ודרשתי מהרשות השנייה לאכוף את החוק. הצטרפו: ";
   $("sh-wa").href = "https://wa.me/?text=" + enc(shareTxt + pageUrl);
