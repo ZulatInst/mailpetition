@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>עצומה: דרשו מהרשות השנייה לאכוף את החוק על ערוץ 14 | זולת</title>
+<meta name="description" content="ערוץ 14 טרם מסר את נתוני הכנסותיו כנדרש בחוק. חתמו, ושלחו מייל מוכן לרשות השנייה.">
+
+<meta property="og:title" content="ערוץ 14 לא מסר את נתוני ההכנסות. חתמו ודרשו אכיפה.">
+<meta property="og:description" content="חתימה אחת, ומיד נפתח לכם מייל מוכן לרשות השנייה עם הנמען, הנושא והטקסט.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="זולת">
+<meta property="og:url" content="https://zulatinst.github.io/mailpetition/">
+<meta property="og:image" content="https://zulatinst.github.io/mailpetition/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/logo_icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap&subset=hebrew" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#07255A;        /* נדגם מקובץ הלוגו הרשמי של זולת */
+    --red:#BC3826;         /* אדום ההדגשה של זולת */
+    --red-dark:#9c2c1c;
+    --ink:#12181f;
+    --muted:#5d6875;
+    --line:#e2e6ec;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0}
+  body{
+    background:var(--navy); color:var(--ink);
+    font-family:"Assistant","Segoe UI",Arial,sans-serif;
+    line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px; margin:0 auto; padding:0 16px 48px}
+
+  header{text-align:center; padding:30px 0 22px}
+  header img{width:126px; height:auto}
+
+  .card{
+    background:#fff; border-radius:16px; padding:28px 26px;
+    box-shadow:0 10px 40px rgba(0,0,0,.28);
+  }
+  .eyebrow{
+    display:inline-block; background:var(--red); color:#fff;
+    font-size:13px; font-weight:700; padding:6px 14px;
+    border-radius:99px; margin-bottom:15px;
+  }
+  h1{font-size:27px; line-height:1.28; margin:0 0 14px; font-weight:800; letter-spacing:-.01em}
+  .lede{font-size:16.5px; color:#39424e; margin:0 0 20px}
+  .lede strong{color:var(--navy)}
+
+  /* ---------- שלב 1: טופס החתימה ---------- */
+  .step-num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:25px; height:25px; border-radius:50%; background:var(--navy);
+    color:#fff; font-size:14px; font-weight:800; margin-left:8px; flex:0 0 auto;
+  }
+  .step-head{display:flex; align-items:center; font-size:17.5px; font-weight:800; margin-bottom:14px}
+
+  label{display:block; font-size:14px; font-weight:700; color:#33404f; margin-bottom:5px}
+  input[type=text], input[type=email]{
+    width:100%; padding:13px 14px; font-size:16.5px; font-family:inherit;
+    border:2px solid var(--line); border-radius:10px; background:#fbfcfe;
+    color:var(--ink); transition:border-color .15s, background .15s;
+  }
+  input[type=text]:focus, input[type=email]:focus{
+    outline:none; border-color:var(--navy); background:#fff;
+  }
+  input.err{border-color:var(--red); background:#fdf4f2}
+  input[type=email]{direction:ltr; text-align:left}
+  .field{margin-bottom:15px}
+  .msg{display:none; color:var(--red); font-size:13.5px; font-weight:700; margin-top:5px}
+  .msg.on{display:block}
+
+  .check{
+    display:flex; align-items:flex-start; gap:10px;
+    background:#f7f9fc; border:1px solid var(--line); border-radius:10px;
+    padding:13px 14px; margin-bottom:8px; cursor:pointer;
+  }
+  .check input{width:19px; height:19px; margin:2px 0 0; flex:0 0 auto; accent-color:var(--navy); cursor:pointer}
+  .check span{font-size:14.5px; color:#3d4956; line-height:1.5; font-weight:400}
+
+  .privacy{font-size:12.5px; color:var(--muted); margin:0 0 18px; line-height:1.55}
+  .privacy a{color:var(--navy)}
+
+  .btn{
+    display:block; width:100%; text-align:center; text-decoration:none;
+    padding:17px 18px; border-radius:11px; font-size:18px; font-weight:800;
+    margin-bottom:10px; border:2px solid transparent; cursor:pointer;
+    font-family:inherit; transition:background .15s, opacity .15s;
+  }
+  .btn-main{background:var(--red); color:#fff; box-shadow:0 4px 14px rgba(188,56,38,.32)}
+  .btn-main:hover{background:var(--red-dark)}
+  .btn-alt{background:#fff; color:var(--navy); border-color:var(--navy)}
+  .btn-alt:hover{background:#eef2f8}
+  .btn[disabled]{opacity:.6; cursor:default}
+
+  /* ---------- שלב 2: שליחת המייל ---------- */
+  #step2{display:none}
+  .signed{
+    display:flex; align-items:center; gap:10px; background:#e9f7f0;
+    border:1px solid #bfe5d1; border-radius:11px; padding:13px 15px;
+    margin-bottom:20px; color:#12603d; font-weight:700; font-size:15.5px;
+  }
+  .signed .v{
+    width:23px; height:23px; border-radius:50%; background:#2fa36b; color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:14px; flex:0 0 auto;
+  }
+  .push{
+    background:#fff8ec; border:1px solid #f0dcb8; border-radius:11px;
+    padding:14px 16px; margin-bottom:18px; font-size:15px; color:#6b4d12;
+  }
+  .push b{color:#4a340a}
+
+  #copied{
+    display:none; text-align:center; color:#12603d; background:#e7f6ee;
+    border:1px solid #bfe5d1; border-radius:9px; padding:10px 12px;
+    font-weight:700; font-size:14.5px; margin-top:12px;
+  }
+  .hint{font-size:13px; color:var(--muted); text-align:center; margin:15px 0 0}
+
+  details{margin-top:20px; border-top:1px solid var(--line); padding-top:16px}
+  summary{cursor:pointer; font-weight:700; font-size:15px; color:var(--navy)}
+  summary::marker{color:var(--red)}
+  .val{background:#f6f8fb; border:1px solid var(--line); border-radius:9px; padding:11px 13px; font-size:15px; white-space:pre-wrap; margin-top:6px}
+  .val.ltr{direction:ltr; text-align:left; font-weight:600}
+  .vlabel{font-size:12px; color:var(--muted); font-weight:800; letter-spacing:.03em; margin-top:13px}
+
+  .share{margin-top:22px; border-top:1px solid var(--line); padding-top:18px; text-align:center}
+  .share p{font-size:14.5px; color:var(--muted); margin:0 0 11px; font-weight:700}
+  .share-row{display:flex; gap:9px}
+  .share-row a{
+    flex:1; padding:11px; border-radius:9px; text-decoration:none;
+    font-size:14.5px; font-weight:700; border:2px solid var(--navy); color:var(--navy);
+  }
+  .share-row a:hover{background:#eef2f8}
+
+  footer{text-align:center; padding:24px 8px 0; color:#a9bad6; font-size:13.5px}
+  footer a{color:#fff; text-decoration:underline; text-underline-offset:3px}
+  footer .tag{display:block; margin-top:6px; color:#8ea3c4; font-size:12.5px}
+
+  @media (max-width:400px){
+    h1{font-size:23.5px}
+    .card{padding:23px 18px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="assets/logo_wide.png" alt="זולת, לשוויון וזכויות אדם">
+  </header>
+
+  <main class="card">
+    <span class="eyebrow">המאבק על התקשורת החופשית</span>
+
+    <h1>ערוץ 14 לא מסר את נתוני ההכנסות שלו. דרשו מהרשות השנייה לאכוף את החוק.</h1>
+
+    <p class="lede">המועד החוקי למסירת הנתונים חלף כבר ב־<strong>31 במרץ 2026</strong>. כל עוד הערוץ לא מוכיח שהוא עומד בתנאים להגדרתו כ״בעל רישיון זעיר״, אין הצדקה שימשיך ליהנות מההקלות ומההטבות שנלוות למעמד הזה.</p>
+
+    <!-- ============ שלב 1 ============ -->
+    <section id="step1">
+      <div class="step-head"><span class="step-num">1</span>חתמו על העצומה</div>
+
+      <form id="form" novalidate>
+        <div class="field">
+          <label for="name">שם מלא</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="ישראל ישראלי">
+          <div class="msg" id="msg-name">נא למלא שם מלא</div>
+        </div>
+
+        <div class="field">
+          <label for="email">כתובת אימייל</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" dir="ltr">
+          <div class="msg" id="msg-email">נא למלא כתובת אימייל תקינה</div>
+        </div>
+
+        <label class="check" for="consent">
+          <input type="checkbox" id="consent">
+          <span>אני מאשר/ת לקבל מזולת עדכונים על המאבק ועל פעילות המכון. אפשר להסיר את ההרשמה בכל עת. הסימון אינו תנאי לחתימה.</span>
+        </label>
+
+        <p class="privacy">הפרטים נשמרים אצל זולת לצורך ניהול העצומה בלבד, ולא יימסרו לצד שלישי. <a href="https://zulat.org.il/" target="_blank" rel="noopener">מדיניות הפרטיות</a></p>
+
+        <button type="submit" class="btn btn-main" id="submit">חתימה על העצומה</button>
+      </form>
+    </section>
+
+    <!-- ============ שלב 2 ============ -->
+    <section id="step2">
+      <div class="signed">
+        <span class="v">✓</span>
+        <span id="signed-txt">החתימה נקלטה. תודה!</span>
+      </div>
+
+      <div class="step-head"><span class="step-num">2</span>עכשיו שלחו את המייל לרשות השנייה</div>
+
+      <div class="push">מייל אישי מתיבת הדואר שלכם נחשב לפנייה רשמית ומחייב את הרשות להתייחס אליו. <b>זה השלב שבאמת עושה את ההבדל.</b></div>
+
+      <a class="btn btn-main" id="gmail" target="_blank" rel="noopener">שליחה דרך Gmail</a>
+      <a class="btn btn-alt" id="mailto">פתיחה באפליקציית המייל שלי</a>
+      <button class="btn btn-alt" id="copy" type="button">העתקת הנוסח והכתובת</button>
+      <p id="copied">הנוסח הועתק. הדביקו במייל חדש ושלחו אל lishka@rashut2.org.il</p>
+
+      <p class="hint">המייל נשלח מתיבת הדואר שלכם. אפשר לערוך את הנוסח לפני השליחה.</p>
+
+      <details>
+        <summary>מה בדיוק נשלח בשמי?</summary>
+        <div class="vlabel">אל</div>
+        <div class="val ltr" id="v-to"></div>
+        <div class="vlabel">נושא</div>
+        <div class="val" id="v-su"></div>
+        <div class="vlabel">גוף ההודעה</div>
+        <div class="val" id="v-body"></div>
+      </details>
+
+      <div class="share">
+        <p>עצומה עובדת רק אם היא מגיעה רחוק</p>
+        <div class="share-row">
+          <a id="sh-wa" target="_blank" rel="noopener">שיתוף בוואטסאפ</a>
+          <a id="sh-fb" target="_blank" rel="noopener">שיתוף בפייסבוק</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://zulat.org.il/" target="_blank" rel="noopener">זולת, מכון לשוויון וזכויות אדם</a>
+    <span class="tag">מאבק בלתי מתפשר למען הדמוקרטיה, זכויות האדם והשוויון בישראל</span>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   הגדרה: פרטי טופס הגוגל שאליו נשמרות החתימות.
+   כל עוד FORM_ID ריק, הדף עדיין עובד והמיילים נשלחים,
+   אך החתימות לא נשמרות בשום מקום.
+   ============================================================ */
+var FORM_ID       = "1FAIpQLSdAiU6euHPY557TIELWXtxCFzyIAzK2nXVGoG6akh2thcY6YA";
+var ENTRY_NAME    = "entry.777967412";
+var ENTRY_EMAIL   = "entry.336598548";
+var ENTRY_CONSENT = "entry.1933926672";
+
+var TO = "lishka@rashut2.org.il";
+var SUBJECT = "דרישה לאכיפת חובת דיווח ההכנסות של ערוץ 14";
+
+function buildBody(signerName){
+  return [
+    "לכבוד",
+    "הרשות השנייה לטלוויזיה ורדיו",
+    "",
+    "אני פונה אליכם בדרישה לפעול מול ערוץ 14, שטרם מסר את מלוא נתוני הכנסותיו כנדרש בחוק, למרות חלוף המועד למסירתם ביום 31.3.26. כל עוד הערוץ אינו מוכיח כי הוא עומד בתנאים להגדרתו כ״בעל רישיון זעיר״, אין הצדקה שימשיך ליהנות מההקלות וההטבות הנלוות למעמד זה. אני קורא/ת לרשות השנייה לאכוף את החוק, לדרוש את הנתונים לאלתר ולהפסיק את ההטבות עד להשלמת הבדיקה.",
+    "",
+    "בברכה,",
+    signerName || ""
+  ].join("\n");
+}
+
+var enc = encodeURIComponent;
+var $ = function(id){ return document.getElementById(id); };
+
+function isEmail(v){ return /^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(v); }
+
+/* ---------- שלב 1: חתימה ---------- */
+$("form").addEventListener("submit", function(ev){
+  ev.preventDefault();
+
+  var name  = $("name").value.trim();
+  var email = $("email").value.trim();
+  var ok = true;
+
+  if(!name){ $("name").classList.add("err");  $("msg-name").classList.add("on");  ok = false; }
+  else     { $("name").classList.remove("err"); $("msg-name").classList.remove("on"); }
+
+  if(!isEmail(email)){ $("email").classList.add("err");  $("msg-email").classList.add("on");  ok = false; }
+  else               { $("email").classList.remove("err"); $("msg-email").classList.remove("on"); }
+
+  if(!ok) return;
+
+  var btn = $("submit");
+  btn.disabled = true;
+  btn.textContent = "רגע, שומר...";
+
+  function proceed(){ goToStep2(name); }
+
+  if(!FORM_ID){ proceed(); return; }
+
+  // שליחה שקטה לטופס הגוגל. mode:"no-cors" אומר שאי אפשר לקרוא את התשובה,
+  // ולכן לא בודקים הצלחה: השמירה לא תחסום את המשתמש מלשלוח את המייל.
+  // חשוב: urlencoded ולא FormData. זה הפורמט שנבדק מול הטופס והתקבל.
+  var body = new URLSearchParams();
+  body.append(ENTRY_NAME,  name);
+  body.append(ENTRY_EMAIL, email);
+  if(ENTRY_CONSENT){
+    body.append(ENTRY_CONSENT, $("consent").checked ? "כן" : "לא");
+  }
+
+  fetch("https://docs.google.com/forms/d/e/" + FORM_ID + "/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"},
+    body: body.toString()
+  }).catch(function(){ /* נבלע בכוונה */ });
+
+  proceed();
+});
+
+function goToStep2(name){
+  var BODY = buildBody(name);
+
+  $("gmail").href  = "https://mail.google.com/mail/?view=cm&fs=1&to=" + enc(TO) +
+                     "&su=" + enc(SUBJECT) + "&body=" + enc(BODY);
+  $("mailto").href = "mailto:" + TO + "?subject=" + enc(SUBJECT) + "&body=" + enc(BODY);
+
+  $("v-to").textContent   = TO;
+  $("v-su").textContent   = SUBJECT;
+  $("v-body").textContent = BODY;
+
+  var pageUrl = location.href.split("#")[0];
+  var shareTxt = "ערוץ 14 לא מסר את נתוני ההכנסות שלו. חתמתי ודרשתי מהרשות השנייה לאכוף את החוק. הצטרפו: ";
+  $("sh-wa").href = "https://wa.me/?text=" + enc(shareTxt + pageUrl);
+  $("sh-fb").href = "https://www.facebook.com/sharer/sharer.php?u=" + enc(pageUrl);
+
+  $("copy").addEventListener("click", function(){
+    var txt = "אל: " + TO + "\n" + "נושא: " + SUBJECT + "\n\n" + BODY;
+    function done(){ $("copied").style.display = "block"; }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      try { document.execCommand("copy"); } catch(e){}
+      document.body.removeChild(ta); done();
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done, fallback);
+    } else { fallback(); }
+  });
+
+  $("step1").style.display = "none";
+  $("step2").style.display = "block";
+  $("step2").scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+</script>
+</body>
+</html>
