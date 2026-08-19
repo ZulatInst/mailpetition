@@ -325,16 +325,16 @@ function goToStep2(name){
   $("v-su").textContent   = SUBJECT;
   $("v-body").textContent = BODY;
 
-    // בנייד, קישור חיבור ההודעה של Gmail נשבר: גוגל מתעלמת מהנמען ומהטקסט
-  // ופותחת תיבת דואר ריקה. לעומת זאת mailto פותח את אפליקציית המייל עם הכל מוכן.
-  // לכן בטלפון הופכים את הסדר ואת ההדגשה.
+  // בנייד, קישור חיבור ההודעה של Gmail נשבר: גוגל מתעלמת מהנמען ומהטקסט
+  // ופותחת את תיבת הדואר הנכנס. אומת בהקלטת מסך מאייפון.
+  // לכן בטלפון מסתירים אותו לגמרי, כדי לא לשלוח אנשים למבוי סתום,
+  // ומקדמים את mailto שפותח את אפליקציית המייל עם הכל מוכן.
   if(/Android|iPhone|iPad|iPod|Mobile|Silk/i.test(navigator.userAgent)){
     var g = $("gmail"), m = $("mailto");
     m.className = "btn btn-main";
-    g.className = "btn btn-alt";
     m.textContent = "פתיחת המייל המוכן";
-    g.textContent = "פתיחה ב־Gmail בדפדפן";
     g.parentNode.insertBefore(m, g);
+    g.style.display = "none";
   }
 
   var pageUrl = location.href.split("#")[0];
